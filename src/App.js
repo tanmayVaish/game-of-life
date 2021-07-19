@@ -4,11 +4,16 @@ import Grid from "./components/Grid";
 import './App.css';
 
 
+
 function App() {
 
+    const row = 50;
+    const col = 50;
 
   return (
-      <Grid></Grid>
+      <>
+          <Grid row={row} col={col}/>
+      </>
   );
 }
 
