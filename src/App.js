@@ -7,8 +7,8 @@ import './App.css';
 
 function App() {
 
-    const row = 50;
-    const col = 50;
+    const row = 100;
+    const col = 100;
 
   return (
       <>
