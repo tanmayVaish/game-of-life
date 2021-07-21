@@ -1,4 +1,16 @@
+@font-face {
+    font-family: Pixel;
+    src: url("../../fonts/Pixel-LCD-7.woff") format('woff');
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 .body{
+    background-image: url("../../imgs/bg.gif");
     display: flex;
 }
 .grid{
@@ -6,8 +18,7 @@
     grid-template-columns: repeat(100, auto);
     justify-content: center;
     align-items: center;
-    border: 2px white solid;
-
+    background: rgba(50,50,50,0.3);
 }
 
 .buttons{
@@ -15,16 +26,20 @@
     bottom: 50vh;
     transform: translate(0,+50%);
     display: flex;
-    align-self: center;
-    border: 2px white solid;
+    flex-flow: column;
+    justify-content: center;
+    margin: 0 15vh 0 15vh;
 }
 
 .buttons button{
-    background-color: purple;
-    box-shadow: rebeccapurple 0 0 5px 2px;
+    font-size: 1.8vh;
+    cursor: pointer;
+    font-family: Pixel,Arial, Helvetica, sans-serif;
+    background: #333;
+    color:white;
+    box-shadow: white 2px 0 10px 3px;
     padding: 2vh;
     border-radius: 10px;
     margin: 1vh;
-    font-size: 2vh;
-    font-weight: 700;
+    font-weight: 600;
 }

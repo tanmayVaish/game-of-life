@@ -30,15 +30,19 @@ const Grid = (props) => {
 
     const [running, setRunning] = useState(false);
     const box1 = {
-        'width': '10px',
-        'height': '10px',
+        'width': '1vmin',
+        'height': '1vmin',
         'backgroundColor': 'yellow',
-        'border': 'green 0.1px solid'
+        'border-top-color': 'rgba(0,0,0,0.2)',
+        'border-right-color': 'rgba(0,0,0,0.2)',
+        'border-bottom-color': 'rgba(0,0,0,0.2)',
+        'border-left-color': 'rgba(0,0,0,0.2)',
+        'border': 'rgba(100,100,100,0.5) 1px solid'
     }
     const box2 = {
-        'width': '10px',
-        'height': '10px',
-        'border': 'green 0.1vh solid'
+        'width': '1vmin',
+        'height': '1vmin',
+        'border': 'rgba(100,100,100,0.5) 1px solid',
     }
 
 
