@@ -1,7 +1,30 @@
+.body{
+    display: flex;
+}
 .grid{
-    position:relative;
     display: grid;
     grid-template-columns: repeat(100, auto);
     justify-content: center;
     align-items: center;
+    border: 2px white solid;
+
+}
+
+.buttons{
+    position: relative;
+    bottom: 50vh;
+    transform: translate(0,+50%);
+    display: flex;
+    align-self: center;
+    border: 2px white solid;
+}
+
+.buttons button{
+    background-color: purple;
+    box-shadow: rebeccapurple 0 0 5px 2px;
+    padding: 2vh;
+    border-radius: 10px;
+    margin: 1vh;
+    font-size: 2vh;
+    font-weight: 700;
 }

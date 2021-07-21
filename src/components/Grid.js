@@ -16,15 +16,16 @@ const Grid = (props) => {
         [-1, 0]
     ];
 
-    const [grid, setGrid] = useState(() => {
+    const setGridNull = () => {
         const rows = [];
-
         for (let i = 0; i < props.row; i++) {
             rows.push(Array.from(Array(props.col), () => 0));
         }
-
-
         return rows;
+    }
+
+    const [grid, setGrid] = useState(() => {
+        return setGridNull();
     });
 
     const [running, setRunning] = useState(false);
@@ -98,22 +99,39 @@ const Grid = (props) => {
             return gridCopy;
         });
 
+        console.log('rendering')
 
         setTimeout(runSimulation, 1);
     }, []);
 
 
     return (
-        <div>
-            <button onClick={() => {
-                setRunning(!running);
-                if (!running) {
-                    runningRef.current = true;
-                    runSimulation();
+        <div className={'body'}>
+            <div className={'buttons'}>
+                <button onClick={() => {
+                    setRunning(!running);
+                    if (!running) {
+                        runningRef.current = true;
+                        runSimulation();
+                    }
                 }
-            }
-            }>{running ? 'Stop' : 'Start'}</button>
+                }>{running ? 'Stop' : 'Start'}</button>
 
+                <button onClick={() => {
+                    setGrid(setGridNull);
+                }
+                }>Reset</button>
+                <button onClick={() => {
+                    let rows = [];
+                    for (let i = 0; i < props.row; i++) {
+                        rows.push(Array.from(Array(props.col), () => (
+                            Math.random() > 0.9 ? 1 : 0
+                        )))
+                    }
+                    setGrid(rows)
+                }
+                }>Random Preset</button>
+            </div>
             <div className={'grid'}>
                 {
                     grid.map((row, i) => row.map((col, j) => (<div key={`${i},${j}`} onClick={() => {
