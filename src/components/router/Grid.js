@@ -1,6 +1,6 @@
 import {useCallback, useRef, useState} from "react";
 
-import './styles/Grid.css'
+import '../styles/Grid.css'
 
 
 const Grid = (props) => {
