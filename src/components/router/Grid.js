@@ -1,5 +1,5 @@
 import {useCallback, useRef, useState} from "react";
-
+import React from "react";
 import '../styles/Grid.css'
 
 
@@ -110,7 +110,7 @@ const Grid = (props) => {
 
 
     return (
-        <div className={'body'}>
+        <div className={'gridBody'}>
             <div className={'buttons'}>
                 <button onClick={() => {
                     setRunning(!running);
@@ -149,4 +149,4 @@ const Grid = (props) => {
     )
 };
 
-export default Grid;
+export default React.memo(Grid);

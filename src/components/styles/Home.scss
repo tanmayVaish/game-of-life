@@ -1,0 +1,41 @@
+
+
+.home{
+    background-color: black;
+    color: white;
+    height: 97vh;
+
+    .homeContent{
+
+        display: flex;
+        height: 100%;
+        flex-flow: column;
+        align-items: center;
+        justify-content: center;
+
+        #homeTitle{
+            font-size: 8vmin;
+            font-weight: 700;
+        }
+
+        #homeBtn{
+            cursor: pointer;
+            border-radius: 1vmin;
+            font-size: 4.4vmin;
+            padding: 1vmin 2vmin 1vmin 2vmin;
+            background-color: green;
+        }
+    }
+
+    .homeFooter{
+        font-size: 2vmin;
+        padding: 1vmin;
+        display: grid;
+        place-content: center;
+        color: white;
+        background-color: green;
+        width: 100%;
+        height: 3vh;
+    }
+}
+
